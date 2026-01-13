@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brice Construction</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b2f24;
+            color: white;
+        }
+
+        /* Updated Colors */
+        :root {
+            --green: #0b2f24;   /* deeper forest green */
+            --gold: #c9a44b;    /* regal metallic gold */
+        }
+
+        /* Top Bar with Company Name */
+        .topbar {
+            background: var(--green);
+            color: var(--gold);
+            padding: 18px 40px;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: left;
+            border-bottom: 3px solid var(--gold);
+        }
+
+       header {
+    background: 
+        linear-gradient(rgba(11,47,36,0.6), rgba(11,47,36,0.6)), 
+        url("images/APT.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+}
+
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+.about-header {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--gold); /* or white, or forest green — your choice */
+    letter-spacing: 2px;
+}
+
+
+        .cta-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-btn {
+    background: linear-gradient(180deg, #f7d778 0%, #d4b24a 100%);
+    color: #0b2f24;
+    padding: 20px 50px;
+    font-size: 28px;
+    font-weight: 900;
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 0 #a3872f, 0 10px 20px rgba(0,0,0,0.4);
+    transition: 0.15s ease-out;
+    border: 3px solid #a3872f;
+}
+
+/* PUSH EFFECT */
+.cta-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #a3872f, 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+        .primary {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .secondary {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+
+        section {
+            padding: 60px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--green);
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+    /* Bigger, bold service titles */
+.service-box h3 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+/* Base service box styling */
+.service-box {
+    position: relative;
+    background: white;
+    color: #0b2f24;
+    padding: 25px;
+    border-left: 6px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-weight: bold;
+}
+
+/* Background image overlays */
+.dev-bg::before,
+.home-bg::before,
+.multi-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* 50% transparent */
+    z-index: 0;
+}
+
+/* Assign images */
+.dev-bg::before {
+    background-image: url("images/dev.jpg");
+}
+
+.home-bg::before {
+    background-image: url("images/home.jpg");
+}
+
+.multi-bg::before {
+    background-image: url("images/multi.jpg");
+}
+
+/* Keep text above background image */
+.dev-bg > *,
+.home-bg > *,
+.multi-bg > * {
+    position: relative;
+    z-index: 1;
+    color: #0b2f24;
+    font-weight: bold;
+}
+
+/* Scrolling gallery container */
+.scroll-gallery {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 3px solid var(--gold);
+}
+
+/* Track that scrolls horizontally */
+.scroll-track {
+    display: flex;
+    animation: scrollService 20s linear infinite;
+}
+
+/* Images inside the track */
+.scroll-track img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes scrollService {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+        footer {
+            background: var(--green);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 3px solid var(--gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR WITH COMPANY NAME -->
+    <div class="topbar">
+        BRICE CONSTRUCTION
+    </div>
+
+    <!-- HERO -->
+    <header>
+        <h1>Building Texas From the Ground Up</h1>
+        <p>Horizontal and vertical construction for residential neighborhoods, commercial developments, and multifamily complexes.</p>
+
+       <div class="cta-buttons">
+    <a href="tel:2145782322" class="cta-btn">CONTACT US</a>
+</div>
+
+    </header>
+
+  <section id="about">
+   <h2 class="about-header">ABOUT US</h2>
+
+    <p>
+        Brice Construction is a Texas‑based land development and construction company built on precision, integrity, 
+        and a commitment to doing things the right way the first time. Our team brings decades of combined experience 
+        across residential, multifamily, and large‑scale land development projects — from raw dirt to fully finished 
+        communities.
+    </p>
+
+    <p>
+        We specialize in turning undeveloped land into thriving neighborhoods and investment‑ready properties. Our 
+        capabilities include clearing, grading, utilities, drainage, road construction, concrete, framing, and full 
+        vertical builds. Whether we’re developing a subdivision, building custom homes, or constructing multifamily 
+        units, we approach every project with the same level of detail, discipline, and pride.
+    </p>
+
+    <p>
+        What sets us apart is our hands‑on approach. We don’t cut corners, we don’t disappear when challenges arise, 
+        and we don’t rely on excuses. We rely on experience, planning, and execution. Every project is managed with 
+        clear communication, transparent timelines, and a relentless focus on quality.
+    </p>
+
+    <p>
+        Brice Construction is more than a contractor — we’re a partner. We work closely with developers, investors, 
+        homeowners, and municipalities to deliver projects that stand the test of time. From the first survey stake 
+        to the final walkthrough, we bring craftsmanship, accountability, and a deep respect for the land we build on.
+    </p>
+
+    <p>
+        Our mission is simple: build with excellence, deliver with integrity, and create spaces that families and 
+        communities can be proud of for generations.
+    </p>
+</section>
+
+
+   <!-- SERVICES -->
+<section>
+    <h2>Our Services</h2>
+
+    <div class="services-grid">
+
+        <!-- LAND DEVELOPMENT -->
+        <div class="service-box dev-bg">
+            <h3>Land Development</h3>
+            <ul>
+                <li>Land clearing & grading</li>
+                <li>Utilities & drainage</li>
+                <li>Roads & paving</li>
+                <li>Subdivision development</li>
+            </ul>
+
+            <div class="scroll-gallery">
+    <div class="scroll-track">
+        <img src="images/NS1.jpg">
+        <img src="images/NS2.jpg">
+        <img src="images/NS3.jpg">
+        <img src="images/AMAVI1.jpg">
+        <img src="images/AMAVI2.jpg">
+        <img src="images/AMAVI3.jpg">
+    </div>
+</div>
+
+        </div>
+
+        <!-- RESIDENTIAL HOMES -->
+        <div class="service-box home-bg">
+            <h3>Residential Homes</h3>
+            <ul>
+                <li>Foundations & concrete</li>
+                <li>Framing & vertical construction</li>
+                <li>Site preparation</li>
+                <li>Project management</li>
+            </ul>
+
+            <div class="scroll-gallery">
+                <div class="scroll-track">
+                    <img src="images/house.png">
+                    <img src="images/house2.png">
+                    <img src="images/house3.png">
+                    <img src="images/house4.png">
+                    <img src="images/house5.png">
+                    <img src="images/house6.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- MULTIFAMILY -->
+        <div class="service-box multi-bg">
+            <h3>Multifamily</h3>
+            <ul>
+                <li>Large‑scale site development</li>
+                <li>Structural framing</li>
+                <li>Concrete flatwork</li>
+                <li>Infrastructure coordination</li>
+            </ul>
+
+            <div class="scroll-gallery">
+    <div class="scroll-track">
+        <img src="images/multi.jpg">
+        <img src="images/MF1.jpg">
+        <img src="images/MF2.jpg">
+        <img src="images/MF3.jpg">
+        <img src="images/MF4.jpg">
+        <img src="images/MF5.jpg">
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+    </section>
+
+   <!-- SUBDIVISION DEVELOPMENT CAROUSEL -->
+<section>
+    <h2>Subdivision Development</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="images/DJI_0077 START.jpg" alt="Start Phase 1">
+            <img src="images/DJI_0080 START.jpg" alt="Start Phase 2">
+            <img src="images/DJI_0082 START.jpg" alt="Start Phase 3">
+            <img src="images/DJI_0083 START.jpg" alt="Start Phase 4">
+            <img src="images/DJI_0087 START.jpg" alt="Start Phase 5">
+
+            <img src="images/DJI_0839 END.jpg" alt="End Phase 1">
+            <img src="images/DJI_0840 END.jpg" alt="End Phase 2">
+            <img src="images/DJI_0841 END.jpg" alt="End Phase 3">
+            <img src="images/DJI_0843 END.jpg" alt="End Phase 4">
+            <img src="images/DJI_0846 END.jpg" alt="End Phase 5">
+        </div>
+    </div>
+</section>
+
+<style>
+    .carousel-container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 40px auto;
+        overflow: hidden;
+        border: 4px solid var(--gold);
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .carousel {
+        display: flex;
+        animation: scroll 40s linear infinite;
+    }
+
+    .carousel img {
+        width: 100%;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-1000%); }
+    }
+</style>
+
+ 
+<!-- CTA -->
+    <section>
+        <h2>Ready to Build?</h2>
+        <p>Let’s bring your project to life — efficiently, safely, and with craftsmanship that lasts.</p>
+
+        <div class="cta-buttons">
+            <a href="#" class="primary">Request a Bid</a>
+            <a href="#" class="secondary">Call Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>BRICE CONSTRUCTION</strong></p>
+        <p>Horizontal & Vertical Construction • Residential • Commercial • Multifamily</p>
+        <p>© 2026 Brice Construction</p>
+    </footer>
+
+</body>
+</html>
