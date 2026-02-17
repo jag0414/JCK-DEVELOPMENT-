@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Development entitlements, permitting, and financial solutions for North Texas land development and subdivision projects. Expert municipal coordination and financing options.">
+    <title>Development Entitlements & Financial Solutions | Brice Construction</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b2f24;
+            color: white;
+        }
+
+        :root {
+            --green: #0b2f24;
+            --gold: #c9a44b;
+        }
+
+        .topbar {
+            background: var(--green);
+            color: var(--gold);
+            padding: 18px 40px;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-align: left;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        nav {
+            background: rgba(11, 47, 36, 0.95);
+            padding: 15px 40px;
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f7d778;
+        }
+
+        header {
+            background: 
+                linear-gradient(rgba(11,47,36,0.75), rgba(11,47,36,0.75)), 
+                url("images/APT.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        header p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: linear-gradient(180deg, #f7d778 0%, #d4b24a 100%);
+            color: #0b2f24;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: 900;
+            border-radius: 10px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            box-shadow: 0 6px 0 #a3872f, 0 10px 20px rgba(0,0,0,0.4);
+            transition: 0.15s ease-out;
+            border: 3px solid #a3872f;
+        }
+
+        .cta-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #a3872f, 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        section {
+            padding: 60px 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .content-section {
+            background: white;
+            color: #0b2f24;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: var(--gold);
+            margin-bottom: 25px;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            color: var(--green);
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            color: var(--green);
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #0b2f24 0%, #164d3a 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 8px;
+            border: 4px solid var(--gold);
+        }
+
+        .service-card h4 {
+            color: var(--gold);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .service-card ul {
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-box {
+            background: linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%);
+            padding: 30px;
+            border-left: 6px solid var(--gold);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h4 {
+            color: var(--green);
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 900;
+        }
+
+        .feature-box p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .financial-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .financial-card {
+            background: white;
+            color: #0b2f24;
+            padding: 35px;
+            border-radius: 8px;
+            border: 4px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .financial-card h4 {
+            color: var(--green);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .financial-card ul {
+            line-height: 2;
+            padding-left: 20px;
+        }
+
+        ul {
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #0b2f24 0%, #164d3a 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border: 4px solid var(--gold);
+        }
+
+        .highlight-box h3 {
+            color: var(--gold);
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .roi-showcase {
+            background: linear-gradient(135deg, #f7d778 0%, #d4b24a 100%);
+            color: #0b2f24;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border: 4px solid #a3872f;
+            text-align: center;
+        }
+
+        .roi-showcase h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+
+        .roi-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .roi-stat {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .roi-number {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--green);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .roi-label {
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        .process-steps {
+            counter-reset: step;
+            margin: 40px 0;
+        }
+
+        .process-step {
+            background: white;
+            color: #0b2f24;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 6px solid var(--gold);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            counter-increment: step;
+            position: relative;
+            padding-left: 90px;
+        }
+
+        .process-step::before {
+            content: counter(step);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--green);
+            color: var(--gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            border: 3px solid var(--gold);
+        }
+
+        .process-step h4 {
+            color: var(--green);
+            font-size: 22px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .process-step p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        footer {
+            background: var(--green);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 3px solid var(--gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        BRICE CONSTRUCTION
+    </div>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="land-development.html">LAND DEVELOPMENT</a>
+        <a href="home-construction.html">HOME CONSTRUCTION</a>
+        <a href="entitlements-financial.html">ENTITLEMENTS & FINANCIAL</a>
+    </nav>
+
+    <header>
+        <h1>Entitlements & Financial Solutions</h1>
+        <p>Navigating complexity with expertise. Maximizing value through strategic planning, regulatory management, and flexible financing options.</p>
+        <div class="cta-buttons">
+            <a href="tel:2145782322" class="cta-btn">DISCUSS YOUR PROJECT</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="content-section">
+            <h2>Simplifying Complex Development Processes</h2>
+            <p>
+                Development success requires more than construction expertise—it demands strategic navigation of entitlements, 
+                regulatory compliance, and financial structuring. Brice Construction brings decades of experience managing these 
+                critical aspects of development projects across North Texas.
+            </p>
+            <p>
+                We serve as your partner from initial site assessment through project completion, coordinating with municipalities, 
+                utility providers, engineers, and financial institutions to ensure your development moves forward efficiently and 
+                profitably.
+            </p>
+        </div>
+
+        <h2>Entitlement Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h4>Zoning & Land Use</h4>
+                <ul>
+                    <li>Zoning analysis and verification</li>
+                    <li>Rezoning applications and hearings</li>
+                    <li>Variance and special use permits</li>
+                    <li>Comprehensive plan amendments</li>
+                    <li>Public hearing preparation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h4>Municipal Coordination</h4>
+                <ul>
+                    <li>Pre-application meetings</li>
+                    <li>Staff and commission liaison</li>
+                    <li>Development agreement negotiation</li>
+                    <li>Impact fee coordination</li>
+                    <li>Municipal utility coordination</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h4>Permitting Management</h4>
+                <ul>
+                    <li>Site plan approval process</li>
+                    <li>Building permit acquisition</li>
+                    <li>Grading and drainage permits</li>
+                    <li>Environmental permits (TCEQ)</li>
+                    <li>Traffic impact studies</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>The Entitlement Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h4>Due Diligence & Analysis</h4>
+                    <p>Comprehensive site assessment including zoning verification, utility availability, environmental constraints, and development feasibility analysis.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Pre-Application Strategy</h4>
+                    <p>Meetings with municipal staff, identification of required approvals, timeline development, and risk assessment.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Application Preparation</h4>
+                    <p>Coordination with engineers, surveyors, and consultants to prepare comprehensive application packages meeting all municipal requirements.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Review & Approval Process</h4>
+                    <p>Active management of review cycles, responding to staff comments, coordinating with departments, and addressing concerns proactively.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Public Hearings</h4>
+                    <p>Preparation and presentation at Planning & Zoning and City Council meetings, addressing public and commission concerns.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Final Approval & Permits</h4>
+                    <p>Obtaining final approvals, securing necessary permits, and coordinating with utility providers for service connections.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Entitlement Expertise That Matters</h3>
+            <p>
+                <strong>Municipal Relationships:</strong> Established working relationships with planning departments, engineering 
+                staffs, and elected officials throughout North Texas.
+            </p>
+            <p>
+                <strong>Process Knowledge:</strong> Deep understanding of local ordinances, development standards, and approval 
+                processes that keep projects moving forward.
+            </p>
+            <p>
+                <strong>Problem Solving:</strong> Creative solutions to entitlement challenges, finding pathways to approval 
+                while meeting community concerns.
+            </p>
+            <p>
+                <strong>Timeline Management:</strong> Realistic scheduling and proactive management to minimize delays and 
+                keep development on track.
+            </p>
+        </div>
+
+        <h2>Financial Solutions</h2>
+        <div class="financial-options">
+            <div class="financial-card">
+                <h4>Development Financing</h4>
+                <ul>
+                    <li>Acquisition & development loans</li>
+                    <li>Construction financing</li>
+                    <li>Lot takedown agreements</li>
+                    <li>Bridge financing options</li>
+                    <li>Lender coordination</li>
+                </ul>
+            </div>
+
+            <div class="financial-card">
+                <h4>Partnership Structures</h4>
+                <ul>
+                    <li>Joint venture opportunities</li>
+                    <li>Equity partnerships</li>
+                    <li>Build-to-suit arrangements</li>
+                    <li>Land banking strategies</li>
+                    <li>Risk sharing models</li>
+                </ul>
+            </div>
+
+            <div class="financial-card">
+                <h4>Project Analysis</h4>
+                <ul>
+                    <li>Pro forma development</li>
+                    <li>Cost estimating & budgeting</li>
+                    <li>Market analysis integration</li>
+                    <li>ROI projections</li>
+                    <li>Risk assessment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="roi-showcase">
+            <h3>Typical North Texas Subdivision Economics</h3>
+            <p style="font-size: 18px; margin-bottom: 30px;">Based on 100-lot subdivision with homes averaging $575,000</p>
+            <div class="roi-stats">
+                <div class="roi-stat">
+                    <span class="roi-number">$57.5M</span>
+                    <span class="roi-label">Total Project Value</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">18-24</span>
+                    <span class="roi-label">Months to Completion</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">20-30%</span>
+                    <span class="roi-label">Target ROI Range</span>
+                </div>
+                <div class="roi-stat">
+                    <span class="roi-number">$50K-$80K</span>
+                    <span class="roi-label">Per-Lot Development Cost</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Why Partner with Brice Construction?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h4>Complete Solutions</h4>
+                    <p>Single-source responsibility from entitlements through construction, simplifying management and accountability.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Risk Mitigation</h4>
+                    <p>Proactive identification and management of regulatory, financial, and construction risks throughout development.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Financial Flexibility</h4>
+                    <p>Multiple financing and partnership options structured to align with your capital strategy and risk tolerance.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Proven Track Record</h4>
+                    <p>Successfully navigated entitlements and financing for numerous North Texas developments, large and small.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Market Knowledge</h4>
+                    <p>Deep understanding of North Texas markets, pricing dynamics, and buyer preferences in the $350K-$800K segment.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>Execution Capability</h4>
+                    <p>Horizontal and vertical construction expertise ensures plans become reality with quality and efficiency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Development Financing Considerations</h3>
+            <p>
+                <strong>Land Acquisition:</strong> Typically 20-30% down payment with seller financing or institutional lending 
+                for balance. Development contingencies protect buyer during entitlement phase.
+            </p>
+            <p>
+                <strong>Development Costs:</strong> Infrastructure development usually financed through construction loans tied 
+                to lot takedowns. Interest reserves and contingencies critical for cash flow management.
+            </p>
+            <p>
+                <strong>Home Construction:</strong> Vertical construction typically financed on per-unit basis with spec or 
+                presale models. Builder relationships and financial strength impact terms.
+            </p>
+            <p>
+                <strong>Exit Strategy:</strong> Lot sales to builders, build-to-sell programs, or long-term hold strategies 
+                each require different capital structures and partnership arrangements.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Project Scale Examples</h2>
+            
+            <h3>30-50 Lot Boutique Development</h3>
+            <p>
+                <strong>Investment Range:</strong> $2M - $4M development costs<br>
+                <strong>Timeline:</strong> 12-18 months to vertical construction<br>
+                <strong>Target Market:</strong> Infill locations, unique sites, premium positioning<br>
+                <strong>Strategy:</strong> Higher per-lot costs offset by premium pricing, selective builder partnerships
+            </p>
+
+            <h3>100-150 Lot Standard Subdivision</h3>
+            <p>
+                <strong>Investment Range:</strong> $6M - $12M development costs<br>
+                <strong>Timeline:</strong> 18-24 months to full completion<br>
+                <strong>Target Market:</strong> Master-planned community feel, family orientation<br>
+                <strong>Strategy:</strong> Phased development, multiple builder participation, amenity focus
+            </p>
+
+            <h3>250-350 Lot Large-Scale Development</h3>
+            <p>
+                <strong>Investment Range:</strong> $15M - $28M development costs<br>
+                <strong>Timeline:</strong> 24-36 months phased development<br>
+                <strong>Target Market:</strong> Destination community, comprehensive amenities<br>
+                <strong>Strategy:</strong> Multi-phase financing, builder alliances, HOA infrastructure
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Ready to Discuss Your Development?</h2>
+            <p style="text-align: center; font-size: 20px;">
+                Whether you're evaluating a site, navigating entitlements, or structuring financing, let's explore how 
+                we can maximize your development's value and minimize risk.
+            </p>
+            <div class="cta-buttons">
+                <a href="tel:2145782322" class="cta-btn">CALL (214) 578-2322</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>BRICE CONSTRUCTION</strong></p>
+        <p>Horizontal & Vertical Construction • Residential • Commercial • Multifamily</p>
+        <p>Phone: <a href="tel:2145782322" style="color: var(--gold);">(214) 578-2322</a></p>
+        <p>© 2026 Brice Construction</p>
+    </footer>
+
+</body>
+</html>
